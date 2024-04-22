@@ -1,13 +1,13 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact } from "./contactsOps";
 
 const handlePending = (state) => {
-  state.isLoading = true;
+  state.loading = true;
 };
 
 const handleRejected = (state, action) => {
-  state.isLoading = false;
-  state.isError = action.payload;
+  state.loadingoading = false;
+  state.error = action.payload;
 };
 
 const contactsSlice = createSlice({
