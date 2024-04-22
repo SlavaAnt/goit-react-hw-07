@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+
 import { IoPersonSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 
-import { deleteContact } from "../../redux/contactsSlice";
-
-import { useDispatch } from "react-redux";
+import { deleteContact } from "../../redux/contactsOps";
 
 import css from "./Contact.module.css";
 
@@ -14,6 +14,7 @@ const Contact = ({ name, number, id }) => {
   const onDeleteContact = (contactId) => {
     dispatch(deleteContact(contactId));
   };
+
   return (
     <>
       <ul>
